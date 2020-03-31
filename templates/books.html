@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container-fluid">
+	    <div class="row">
+        {% for book in books %}
+		    <div class="col s4">
+            
+			    <div class="card small">
+               
+				    <div class="card-image">
+                        <img class="responsive-img" src= "{{book.img_url}}" alt="Front page of Atomic Habits">
+                    </div>
+                    
+					<div class="card-content">
+						<span class="card-title grey-text text-darken-4">{{book.book_name}}</span>
+					</div>
+                    
+					<div class="card-tabs">
+						<ul class="tabs tabs-fixed-width">
+							<li class="tab"><a class="active" href="#test4{{loop.index}}">Author</a></li>
+							<li class="tab"><a href="#test5{{loop.index}}">Genre</a></li>
+							<li class="tab"><a href="#test6{{loop.index}}">Rating</a></li>
+						</ul>
+					</div>
+					<div class="card-content grey lighten-4">
+						<div id="test4{{loop.index}}">{{book.book_author}}</div>
+						<div id="test5{{loop.index}}">{{book.book_genre}}</div>
+						<div id="test6{{loop.index}}">{{book.book_rating}} - {{book.book_comments}}</div>    
+                        
+					</div>
+            
+				</div>
+                
+			</div>
+           {% endfor %}
+		</div>
+         
+	</div>
+
+    
+{% endblock %}
+

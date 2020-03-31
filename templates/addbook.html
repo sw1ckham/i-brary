@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+<h3>Add Book</h3>
+	<div class="row">
+		<form action="{{ url_for('insert_book') }}" method="POST" class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">book</i>
+					<input id="book_name" name="book_name" type="text" class="validate">
+					<label for="book_name">Book Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">local_library</i>
+					<input id="book_author" name="book_author" type="text" class="validate">
+					<label for="book_author">Author Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">import_contacts</i>
+					<input id="book_genre" name="book_genre" type="text" class="validate">
+					<label for="book_genre">Genre</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">portrait</i>
+					<input id="img_url" name="img_url" type="text" class="validate">
+					<label for="img_url">Image URL</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">rate_review</i>
+					<input id="book_rating" name="book_rating" type="tel" class="validate">
+					<label for="book_rating">Rating</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">insert_comment</i>
+					<textarea id="book_comments" name="book_comments" class="materialize-textarea"></textarea>
+					<label for="book_comments">Comments</label>
+				</div>
+			</div>
+			<div class="row">
+				<button class="btn waves-effect waves-light" type="submit" name="action">Add Book
+                    <i class="material-icons right">send</i>
+                </button>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
