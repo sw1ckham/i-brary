@@ -1,7 +1,8 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import bcrypt
 
 app = Flask(__name__)
 
@@ -12,6 +13,40 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
+def index():
+    if 'user_username' in session:
+        return 'You are logged in as ' + session['user_username']
+
+    return render_template('base.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
+@app.route('/register', methods=["POST", "GET"])
+def register():
+    if request.method == "POST":
+        users = mongo.db.users
+        existing_user = users.find_one({
+            'user_username': request.form('user_username')
+            })
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form('user_password').encode('utf-8'), bcrypt.gensalt())
+            users.insert({
+                'user_username': request.form('user_username'),
+                'user_password': hashpass
+                })
+            session['user_username'] = request.form('user_username')
+            return redirect(url_for('index'))
+        else:
+            return 'This username already exists'
+
+    return render_template('register.html')
+
+
 @app.route('/show_books')
 def show_books():
     return render_template('books.html', books=mongo.db.books.find())
@@ -57,6 +92,7 @@ def delete_book(book_id):
 
 
 if __name__ == '__main__':
+    app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),
     debug=True)
