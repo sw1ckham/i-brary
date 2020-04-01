@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+
+<h3 class="heading" >Please Register</h3>
+
+<div class="row center">
+	<form methods="POST" action="{{url_for('register')}}" class="col s12">
+        <div class="row">
+			<div class="input-field col s12">
+				<input id="username" type="email" name="user_username">
+				<label for="username">Username</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="password" type="password" name="user_password" class="validate">
+				<label for="password">Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+			<a href="{{url_for('register')}}" class="waves-effect waves-light btn">Register</a>
+			</div>
+		</div>
+	</form>
+</div>
+</div>
+
+{% endblock %}
