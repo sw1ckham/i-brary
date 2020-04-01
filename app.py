@@ -29,6 +29,33 @@ def insert_book():
     return redirect(url_for('show_books'))
 
 
+@app.route('/edit_book/<book_id>')
+def edit_book(book_id):
+    the_book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
+    return render_template('editbook.html', book=the_book)
+
+
+@app.route('/update_book/<book_id>', methods=['POST'])
+def update_book(book_id):
+    books = mongo.db.books
+    books.update({'_id': ObjectId(book_id)},
+    {
+        'book_name': request.form.get('book_name'),
+        'book_author': request.form.get('book_author'),
+        'book_genre': request.form.get('book_genre'),
+        'img_url': request.form.get('img_url'),
+        'book_rating': request.form.get('book_rating'),
+        'book_comments': request.form.get('book_comments')
+    })
+    return redirect(url_for('show_books'))
+
+
+@app.route('/delete_book/<book_id>')
+def delete_book(book_id):
+    mongo.db.books.find_one_and_delete({'_id': ObjectId(book_id)})
+    return redirect(url_for('show_books'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),
