@@ -1,7 +1,34 @@
 body {
-    background-color: #0220384d;
+    background-color: #163a56b8;
 }
 
-.btn-small {
+#card {
+    padding-top: 50px;
+}
+
+.card {
+    height: 500px;
+    width: 200px;
     
+}
+
+.card-image img {
+    height: 250px;
+}
+
+.heading {
+    text-align: center;
+}
+
+
+
+
+
+
+a .btn-small {
+    bottom: 5px;
+}               
+
+.card-title {
+    line-height: 15px;
 }
