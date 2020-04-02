@@ -43,8 +43,8 @@ def register():
             return redirect(url_for('index'))
         else:
             return 'This username already exists'
-
-    return render_template('register.html')
+    else:
+        return render_template('register.html')
 
 
 @app.route('/show_books')
