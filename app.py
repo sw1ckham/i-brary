@@ -12,17 +12,35 @@ app.config['MONGO_URI'] = 'mongodb://sw1ckham:1hamcvcw123@myfirstcluster-shard-0
 mongo = PyMongo(app)
 
 
-@app.route('/')
+@app.route('/index')
 def index():
     if 'user_username' in session:
         return 'You are logged in as ' + session['user_username']
 
-    return render_template('base.html')
+    return render_template('books.html')
 
 
-@app.route('/login')
-def login():
+@app.route('/show_login')
+def show_login():
     return render_template('login.html')
+
+
+@app.route('/login', methods=["POST"])
+def login():
+    users = mongo.db.users
+    login_user = users.find_one({'name': request.form['user_username']})
+
+    if login_user:
+        if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password'].encode('utf-8')) == login_user['user_password'].encode('utf-8'):
+            session['user_username'] = request.form['user_username']
+            return redirect(url_for('index'))
+        return 'Invalid username/password combination'
+    return 'Invalid Username'
+
+
+@app.route('/show_register')
+def show_register():
+    return render_template('register.html')
 
 
 @app.route('/register', methods=["POST", "GET"])
@@ -30,26 +48,26 @@ def register():
     if request.method == "POST":
         users = mongo.db.users
         existing_user = users.find_one({
-            'user_username': request.form('user_username')
+            'user_username': request.form['user_username']
             })
-
         if existing_user is None:
-            hashpass = bcrypt.hashpw(request.form('user_password').encode('utf-8'), bcrypt.gensalt())
+            hashpass = bcrypt.hashpw(request.form['user_password'].encode('utf-8'), bcrypt.gensalt())
             users.insert({
-                'user_username': request.form('user_username'),
+                'user_username': request.form['user_username'],
                 'user_password': hashpass
                 })
-            session['user_username'] = request.form('user_username')
+            session['user_username'] = request.form['user_username']
             return redirect(url_for('index'))
         else:
             return 'This username already exists'
-    else:
-        return render_template('register.html')
+    return render_template('addbook.html')
 
 
+@app.route('/')
 @app.route('/show_books')
 def show_books():
     return render_template('books.html', books=mongo.db.books.find())
+
 
 
 @app.route('/add_book')
