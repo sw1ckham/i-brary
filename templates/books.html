@@ -3,30 +3,33 @@
 {% block content %}
 
     <div class="container-fluid">
-	    <div class="row center">
+	    <div class="row">
         {% for book in books %}
-		    <div id="card" class="col s6 m3 l2">
-			    <div class="card">
+		    <div id="card" class="col s12 m4 l3 center">
+			    <div class="card hoverable center-block">
 				    <div class="card-image">
                         <img src= "{{book.img_url}}" alt="Front page of Atomic Habits">
                     </div>   
-					<div class="card-content">
+					<div class="card-content title-content">
 						<span class="card-title grey-text text-darken-4">{{book.book_name}}</span>
 					</div> 
 					<div class="card-tabs">
-						<ul class="tabs tabs-fixed-width">
-							<li class="tab"><a class="active" href="#test4{{loop.index}}">Author</a></li>
-							<li class="tab"><a href="#test5{{loop.index}}">Genre</a></li>
-							<li class="tab"><a href="#test6{{loop.index}}">Rating</a></li>
+						<ul class="tabs">
+							<li class="tab col s4"><a class="active" href="#test4{{loop.index}}">Author</a></li>
+							<li class="tab col s4"><a href="#test5{{loop.index}}">Genre</a></li>
+							<li class="tab col s4"><a href="#test6{{loop.index}}">Rating</a></li>
 						</ul>
 					</div>
-					<div class="card-content grey lighten-4">
+					<div class="card-content grey lighten-4 tabs-content">
 						<div id="test4{{loop.index}}">{{book.book_author}}</div>
 						<div id="test5{{loop.index}}">{{book.book_genre}}</div>
-						<div id="test6{{loop.index}}">{{book.book_rating}} - {{book.book_comments}}</div>   
+						<div id="test6{{loop.index}}">{{book.book_rating}} - {{book.book_comments}}</div>     
+					</div>
+                    <div class="card-content grey lighten-4">
                         <a href="{{url_for('edit_book', book_id=book._id)}}" class="waves-effect waves-light btn-small indigo darken-4">Edit</a>
                         <a href="{{url_for('delete_book', book_id=book._id)}}" class="waves-effect waves-light btn-small indigo darken-4">Delete</a>   
-					</div>
+                        <a href="" class="waves-effect waves-light btn-small indigo darken-4">Save</a> 
+                    </div>
 				</div>
 			</div>
            {% endfor %}
