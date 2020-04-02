@@ -12,12 +12,10 @@ app.config['MONGO_URI'] = 'mongodb://sw1ckham:1hamcvcw123@myfirstcluster-shard-0
 mongo = PyMongo(app)
 
 
+@app.route('/')
 @app.route('/index')
 def index():
-    if 'user_username' in session:
-        return 'You are logged in as ' + session['user_username']
-
-    return render_template('books.html')
+    return render_template('index.html', books=mongo.db.books.find({"book_share": "on"}))
 
 
 @app.route('/show_login')
@@ -25,18 +23,17 @@ def show_login():
     return render_template('login.html')
 
 
-@app.route('/login', methods=["POST"])
+@app.route('/login', methods=["POST", "GET"])
 def login():
     users = mongo.db.users
-    login_user = users.find_one({'name': request.form['user_username']})
+    login_user = users.find_one({'user_username': request.form['user_username']})
 
     if login_user:
-        if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password'].encode('utf-8')) == login_user['user_password'].encode('utf-8'):
+        if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password']) == login_user['user_password']:
             session['user_username'] = request.form['user_username']
-            return redirect(url_for('index'))
+            return redirect(url_for('show_books'))
         
     return 'Invalid username/password combination'
-    
 
 
 @app.route('/show_register')
@@ -61,13 +58,13 @@ def register():
             return redirect(url_for('index'))
         else:
             return 'This username already exists'
-    return render_template('addbook.html')
+    return render_template('books.html')
 
 
-@app.route('/')
-@app.route('/show_books')
+@app.route('/show_books', methods=["POST", "GET"])
 def show_books():
-    return render_template('books.html', books=mongo.db.books.find())
+    username = session['user_username']
+    return render_template('books.html', books=mongo.db.books.find({"added_by": username}))
 
 
 
@@ -80,6 +77,7 @@ def add_book():
 def insert_book():
     books = mongo.db.books
     books.insert_one(request.form.to_dict())
+    print(request.form.to_dict())
     return redirect(url_for('show_books'))
 
 
@@ -110,8 +108,15 @@ def delete_book(book_id):
     return redirect(url_for('show_books'))
 
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),
     debug=True)
+
+
