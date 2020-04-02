@@ -3,8 +3,8 @@
 {% block content %}
 
 
-<div class="container">
-<h3>Add Book</h3>
+<div class="container-fluid center">
+	<h3 class="heading">Add Book</h3>
 	<div class="row">
 		<form action="{{ url_for('insert_book') }}" method="POST" class="col s12">
 			<div class="row">
@@ -50,7 +50,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Add Book
+				<div class="switch">
+					<label>
+                    <input id="book_share" name="book_share" type="checkbox">
+                    <span class="lever"></span>
+                    Share
+                    </label>
+				</div>
+			</div>
+			<div class="row">
+				<button class="btn waves-effect waves-light indigo darken-4" type="submit" name="action">Add Book
                     <i class="material-icons right">send</i>
                 </button>
 			</div>
