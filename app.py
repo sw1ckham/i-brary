@@ -34,8 +34,9 @@ def login():
         if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password'].encode('utf-8')) == login_user['user_password'].encode('utf-8'):
             session['user_username'] = request.form['user_username']
             return redirect(url_for('index'))
-        return 'Invalid username/password combination'
-    return 'Invalid Username'
+        
+    return 'Invalid username/password combination'
+    
 
 
 @app.route('/show_register')
