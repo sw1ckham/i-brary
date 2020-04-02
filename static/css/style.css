@@ -1,0 +1,61 @@
+body {
+    background-color: #80a1bbb8;
+}
+
+#card {
+    padding-top: 50px;
+}
+
+.card {
+    height: 475px;
+    width: 225px;
+    position: relative;
+    -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+}
+
+nav {
+    -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+}
+
+.card .card-content {
+    padding: 10px;
+}
+
+.tab {
+    overflow-x: visible; 
+    overflow-y: visible;
+}
+
+.card-image img {
+    height: 300px;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+}
+
+.btn-small {
+    padding: 5px;
+}               
+
+.card-title {
+    line-height: 15px;
+}
+
+.input-field .prefix {
+    color: #fff;
+}
+
+.input-field > label {
+    color: #351869
+} 
+
+.input-field > label .active {
+    color: #351869
+}
+
