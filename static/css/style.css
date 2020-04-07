@@ -131,4 +131,16 @@ textarea.materialize-textarea:focus:not([readonly]) {
     background-color: #2503e038;
 }
 
+.carousel {
+    overflow: visible;
+    width: 1000px;
+}
+
+.carousel .carousel-item {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 300px;
+    height: 300px;
+}
+
 
