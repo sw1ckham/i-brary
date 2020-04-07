@@ -1,6 +1,14 @@
+
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: #80a1bbb8;
-}
+  }
+
+main {
+    flex: 1 0 auto;
+  }
 
 #card {
     padding-top: 50px;
@@ -58,4 +66,69 @@ nav {
 .input-field > label .active {
     color: #351869
 }
+
+footer {
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.page-footer {
+    background-color:#1a237e40;
+}
+
+/* #page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 3.5rem;   
+} */
+
+/* Over riding materialize custm styles in the input fields in all forms */
+
+input[type=password]:not(.browser-default),
+input[type=text]:not(.browser-default),
+.input-field .prefix ~ input,
+.input-field .prefix ~ textarea, {
+    border-bottom: 1px solid #403e4938;
+}
+
+/* Once clicked on... */
+
+/* Icons */
+
+.input-field .prefix.active {
+    color: #2503e038;
+}
+
+
+.input-field .material-icons .prefix .active {
+    border-bottom: 1px solid #2503e038;
+}
+
+/*labels*/
+
+textarea.materialize-textarea:focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label {
+    color: #2503e038;
+}
+
+/* Underlines */
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2503e038;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after,
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #2503e038;
+}
+
 

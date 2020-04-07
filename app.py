@@ -31,7 +31,7 @@ def login():
     if login_user:
         if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password']) == login_user['user_password']:
             session['user_username'] = request.form['user_username']
-            return redirect(url_for('show_books'))
+            return redirect(url_for('index'))
         
     return 'Invalid username/password combination'
 
