@@ -21,6 +21,16 @@ into your own view on your account.</p>
 
 ### User Stories
 
+As a user I want...
+
+*
+*
+*
+*
+*
+*
+*
+
 ### Design Choices
 
 
@@ -34,9 +44,38 @@ into your own view on your account.</p>
 
 ## Technologies used
 
+*HTML5
+*CSS3
+*Python
 
+*MongoDB
+
+*Materialize
+*Jquery
+*Flask
+*PyMongo
+*Brycpyt
+
+*Google Fonts
+*Font Awesome
+
+*GitPod
+*GitHub
+
+*Git
 
 ## Testing
+
+I began my testing using.. 
+
+HTML WC3 Markup Validation Service.
+CSS WC3 Markup Validation Service
+
+###Bugs during developement
+
+1. The columns the cards from Materialize were in, were not centering inside their row.
+*Solution: Add a flexbox class to the column you need to center. Add custom styles to center. 
+https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row
 
 
 
@@ -52,6 +91,8 @@ into your own view on your account.</p>
 
 ### Code 
 materializecss.com/cards.html
+https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row -- Helped center cards on index.html
+https://www.cssmatic.com/box-shadow -- For box shadow on nav bar and cards
 
 ### Acknowledgements
 
