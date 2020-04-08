@@ -15,10 +15,10 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', books=mongo.db.books.find({"book_share": "on"}))
+    return render_template('index.html', books=mongo.db.books.find({"book_share": "on"}))  # Only show books on the index.html that has been set to share:on when added.
 
 
-@app.route('/show_login')
+@app.route('/show_login')  # For the login Button
 def show_login():
     return render_template('login.html')
 
@@ -26,17 +26,17 @@ def show_login():
 @app.route('/login', methods=["POST", "GET"])
 def login():
     users = mongo.db.users
-    login_user = users.find_one({'user_username': request.form['user_username']})
+    login_user = users.find_one({'user_username': request.form['user_username']})  #Check if user info is in the system
 
     if login_user:
         if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password']) == login_user['user_password']:
             session['user_username'] = request.form['user_username']
             return redirect(url_for('index'))
         
-    return 'Invalid username/password combination'
+    return 'Invalid username/password combination'  # Error message if user info isn't in the system. 
 
 
-@app.route('/show_register')
+@app.route('/show_register')  # For the register button
 def show_register():
     return render_template('register.html')
 
@@ -47,11 +47,11 @@ def register():
         users = mongo.db.users
         existing_user = users.find_one({
             'user_username': request.form['user_username']
-            })
-        if existing_user is None:
+            })  # Check if user is in the system
+        if existing_user is None:  # If not.. 
             hashpass = bcrypt.hashpw(request.form['user_password'].encode('utf-8'), bcrypt.gensalt())
             users.insert({
-                'user_username': request.form['user_username'],
+                'user_username': request.form['user_username'],   #Insert user info given in the form, into new user object in database
                 'user_password': hashpass
                 })
             session['user_username'] = request.form['user_username']
