@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@700&display=swap');
 
-
 body {
     display: flex;
     min-height: 100vh;
@@ -12,27 +11,27 @@ main {
     flex: 1 0 auto;
   }
 
+/*-- Headings ---*/
+
 .topPicksHeading {
     font-family: 'Playfair Display', serif;
+    color: #4b5f69;
 }
 
 .sharedByYouHeading {
     font-family: 'Playfair Display', serif;
-    padding-top: 125px;
+    padding-top: 25px;
+    color: #4b5f69;
 }
 
-#card {
-    padding-top: 50px;
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #4b5f69;
 }
 
-.card {
-    height: 475px;
-    width: 225px;
-    position: relative;
-    -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
-    box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
-}
+/*-- NavBar --*/
+
+/* box shadow code from https://www.cssmatic.com/box-shadow */
 
 nav {
     -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
@@ -44,10 +43,25 @@ nav .brand-logo {
     font-family: 'Playfair Display', serif;
 }
 
+/*-- Cards for books on homepage ---*/
+
+#card {
+    padding-top: 50px;
+}
+
+/* box shadow code from https://www.cssmatic.com/box-shadow */
+.card {
+    height: 475px;
+    width: 225px;
+    position: relative;
+    -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
+}
+
 .card .card-content {
     padding: 10px;
 }
-
 
 .tab {
     overflow-x: visible; 
@@ -56,32 +70,19 @@ nav .brand-logo {
 
 .card-image img {
     height: 300px;
-}
-
-.heading {
-    text-align: center;
-    color: #fff;
-}
-
-.btn-small {
-    padding: 5px;
-}               
+}           
 
 .card-title {
     line-height: 15px;
 }
 
-.input-field .prefix {
-    color: #fff;
-}
+/*--Buttons--*/ 
 
-.input-field > label {
-    color: #351869
-} 
+.btn-small {
+    padding: 5px;
+}    
 
-.input-field > label .active {
-    color: #351869
-}
+/* --- Footer ---*/
 
 footer {
     bottom: 0;
@@ -93,14 +94,6 @@ footer {
     background-color:#1a237e40;
 }
 
-/* #page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 3.5rem;   
-} */
 
 /* Over riding materialize custm styles in the input fields in all forms */
 
@@ -108,7 +101,19 @@ input[type=password]:not(.browser-default),
 input[type=text]:not(.browser-default),
 .input-field .prefix ~ input,
 .input-field .prefix ~ textarea, {
-    border-bottom: 1px solid #403e4938;
+    border-bottom: 1px solid #4b5f69;
+}
+
+.input-field .prefix {
+    color: #fff;
+}
+
+.input-field > label {
+    color: #4b5f69
+} 
+
+.input-field > label .active {
+    color: #4b5f69
 }
 
 /* Once clicked on... */
@@ -118,7 +123,6 @@ input[type=text]:not(.browser-default),
 .input-field .prefix.active {
     color: #2503e038;
 }
-
 
 .input-field .material-icons .prefix .active {
     border-bottom: 1px solid #2503e038;
@@ -130,7 +134,7 @@ textarea.materialize-textarea:focus:not([readonly])+label,
 input[type=password]:not(.browser-default):focus:not([readonly])+label,
 input[type=text]:not(.browser-default):focus:not([readonly])+label,
 input[type=tel]:not(.browser-default):focus:not([readonly])+label {
-    color: #2503e038;
+    color: #4b5f69;
 }
 
 /* Underlines */
@@ -139,13 +143,15 @@ input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 input[type=tel]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #2503e038;
+    border-bottom: 1px solid #4b5f69;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after,
 .switch label input[type=checkbox]:checked+.lever {
-    background-color: #2503e038;
+    background-color: #4231a2db;
 }
+
+/*--- Carousel ---*/
 
 .carousel {
     overflow: visible;
@@ -163,11 +169,23 @@ textarea.materialize-textarea:focus:not([readonly]) {
     padding-top: 50px;
 }
 
+/* --- Flexbox code taken from https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row to center card columns --- */
+
 .flexbox { 
      display: flex; 
-     /* flex-wrap: wrap;  */
      justify-content: center; 
      align-items: center; 
      }
 
+/*-- Block Dividers -- */
+
+.block-divider {
+    width: 70%;
+    height: 1px;
+    color: #4b5f69;
+    background-color: #4b5f69;
+    margin-top: 125px;
+    border-style: none;
+
+}
 
