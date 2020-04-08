@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@700&display=swap');
+
 
 body {
     display: flex;
@@ -9,6 +11,15 @@ body {
 main {
     flex: 1 0 auto;
   }
+
+.topPicksHeading {
+    font-family: 'Playfair Display', serif;
+}
+
+.sharedByYouHeading {
+    font-family: 'Playfair Display', serif;
+    padding-top: 125px;
+}
 
 #card {
     padding-top: 50px;
@@ -29,9 +40,14 @@ nav {
     box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
 }
 
+nav .brand-logo {
+    font-family: 'Playfair Display', serif;
+}
+
 .card .card-content {
     padding: 10px;
 }
+
 
 .tab {
     overflow-x: visible; 
@@ -142,5 +158,16 @@ textarea.materialize-textarea:focus:not([readonly]) {
     width: 300px;
     height: 300px;
 }
+
+#carousel {
+    padding-top: 50px;
+}
+
+.flexbox { 
+     display: flex; 
+     /* flex-wrap: wrap;  */
+     justify-content: center; 
+     align-items: center; 
+     }
 
 
