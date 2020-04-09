@@ -5,13 +5,11 @@
 <p>I-brary is a fully responsive, user based, book recommendation site.
 You can browse the Homepage for book recommendations and reviews. You can log in and add your own book reviews, you have the option
 to 'share', once shared your book will show up on the homepage. If you don't share, 
-your book review will only been seen in your own view. You can also save book reviews from the homepage
-into your own view on your account.</p>
+your book review will only been seen in your own view.</p>
 
 </div>
 
 ## UX
-
 
 ### Project Goals
 
@@ -21,8 +19,6 @@ so if they decide to share their book, other users can get inspiration from the 
 ### User Goals
 
 I want to have a place online I can store my favourite books and also get information on other books I have not read. 
-
-### Developer and Business Goals
 
 ### User Stories
 
@@ -47,14 +43,14 @@ This would be a large range of ages and backgrounds. Due to this I have stuck to
 
 + Colour
 ... I chose Blue as my main colour because it is known as a very calm colour, reading is a peaceful activitie and so should looking into books online. 
-...Also there are a lot of colours and patterns on the covers of the books. I want the books to stand out and be the main feature on the page, therefore
-...light blue background worked very well as it brings any elements to the foreground. 
-...I chose a dark blue colour for the nav bar and the buttons. These are all points of contact for the user and I wanted them to stand out without
-...contrasting with the rest of the sit. 
+... Also there are a lot of colours and patterns on the covers of the books. I want the books to stand out and be the main feature on the page, therefore
+... light blue background worked very well as it brings any elements to the foreground. 
+... I chose a dark blue colour for the nav bar and the buttons. These are all points of contact for the user and I wanted them to stand out without
+... contrasting with the rest of the sit. 
 
 + Styling
-...I used the Materialize framework which kept the site clean and simple.
-...I decided not to curve off any edges on photos/cards, I want the site to have the resemblence of book corners throughout and the book images, 
+... I used the Materialize framework which kept the site clean and simple.
+... I decided not to curve off any edges on photos/cards, I want the site to have the resemblence of book corners throughout and the book images, 
 to stay looking like books. 
 
 ## Wireframes 
@@ -64,7 +60,6 @@ to stay looking like books.
 ## Features
 
 + Nav Bar
--
 
 + Log In / Register options.
 
@@ -81,25 +76,25 @@ to stay looking like books.
 
 ## Technologies used
 
-*HTML5
-*CSS3
-*Python
+* HTML5
+* CSS3
+* Python
 
-*MongoDB
+* MongoDB
 
-*Materialize
-*Jquery
-*Flask
-*PyMongo
-*Brycpyt
+* Materialize
+* Jquery
+* Flask
+* PyMongo
+* Brycpyt
 
-*Google Fonts
-*Font Awesome
+* Google Fonts
+* Font Awesome
 
-*GitPod
-*GitHub
+* GitPod
+* GitHub
 
-*Git
+* Git
 
 ## Testing
 
@@ -118,20 +113,33 @@ https://stackoverflow.com/questions/50671682/center-align-items-in-materializecs
 
 ## Deployment
 
+I developed this project using the GitPod, committing to Git and pushing to GitHub via the locally installed Git commands. 
 
+The following steps run through how I deployed this project to heroku. https://dashboard.heroku.com/
+
+- Login to heroku
+- 
 
 ## Credits
 
 ### Content
 
+All content written in this project was written by the developer.
+
 ### Media
+
+I sourced all photos for the books from online mainly google images and copied the image url. 
+
+All icons came from Materialize's library https://materializecss.com/icons.html
 
 ### Code 
 materializecss.com/cards.html
 https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row -- Helped center cards on index.html
 https://www.cssmatic.com/box-shadow -- For box shadow on nav bar and cards
+https://materializecss.com/icons.html
+https://materializecss.com/cards.html
 
 ### Acknowledgements
 
-
+Thank you very much to my mentor Spencer who helped me throughout. Also to the student care tutors (especially Tim!). 
 
