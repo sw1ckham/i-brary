@@ -16,6 +16,7 @@ main {
 .topPicksHeading {
     font-family: 'Playfair Display', serif;
     color: #4b5f69;
+    padding-top: 20px;
 }
 
 .sharedByYouHeading {
@@ -51,7 +52,7 @@ nav .brand-logo {
 
 /* box shadow code from https://www.cssmatic.com/box-shadow */
 .card {
-    height: 475px;
+    max-height: 475px;
     width: 225px;
     position: relative;
     -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
@@ -61,11 +62,37 @@ nav .brand-logo {
 
 .card .card-content {
     padding: 10px;
+    overflow-y: scroll;
+}
+
+.card .card-content .title-content {
+    padding: 10px;
+    height: 50px;
 }
 
 .tab {
     overflow-x: visible; 
     overflow-y: visible;
+}
+.card-tabs .tabs .tab a {
+    padding: 0;
+    color: #4b5f69;
+}
+
+.tabs .tab a:hover, 
+.tabs .tab a.active {
+    color: #4b5f69;
+}
+
+.tabs .tab a:focus, 
+.tabs .tab a:focus.active,
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: #b9bddc40;
+}
+
+.card .card-content .tab-content {
+    overflow-y: scroll;
+    height: 100px;
 }
 
 .card-image img {
@@ -154,26 +181,26 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /*--- Carousel ---*/
 
 .carousel {
-    overflow: visible;
-    width: 1000px;
+    width: 300px;
+    position: relative;
+    padding-top: 50px;
+    margin-top: -75px;
+    margin-bottom: -100px;
 }
 
 .carousel .carousel-item {
-    padding-right: 30px;
-    padding-left: 30px;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#carousel {
-    padding-top: 50px;
-}
 
 /* --- Flexbox code taken from https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row to center card columns --- */
 
 .flexbox { 
      display: flex; 
-     justify-content: center; 
+     justify-content: center;  
      align-items: center; 
      }
 
@@ -184,8 +211,22 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 1px;
     color: #4b5f69;
     background-color: #4b5f69;
-    margin-top: 125px;
     border-style: none;
 
 }
+
+/*-- Media Queries -- */
+
+
+@media (min-wdith: 768px) {
+
+    .carousel .carousel-item {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 100px;
+    height: 200px;
+}
+
+}
+
 
