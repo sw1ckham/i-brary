@@ -38,7 +38,7 @@
     </div>
 
 		<ul class="sidenav" id="mobile-demo">
-			<li><a href="{{url_for('show_books')}}">Home</a></li>
+			<li><a href="{{url_for('index')}}">Home</a></li>
             {% if 'user_username' not in session %}
 			<li><a href="{{url_for('show_login')}}">Log In</a></li>
             <li><a href="{{url_for('show_register')}}">Register</a></li>
