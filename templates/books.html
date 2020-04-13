@@ -9,14 +9,14 @@
         
         <hr class="block-divider">
         {% for book in books %}
-		    <div id="card" class="col s12 m4 l3 flexbox">
+		    <div id="card" class="col s12 m4 l3 center flexbox">
 			    <div class="card hoverable center-block">
 				    <div class="card-image">
                         <img src= "{{book.img_url}}" alt="Front page of Atomic Habits">
                     </div>   
-					<div class="card-content title-content">
+					<!-- <div class="card-content title-content">
 						<span class="card-title grey-text text-darken-4">{{book.book_name}}</span>
-					</div> 
+					</div>  -->
 					<div class="card-tabs">
 						<ul class="tabs">
 							<li class="tab col s4"><a class="active" href="#test4{{loop.index}}">Author</a></li>
