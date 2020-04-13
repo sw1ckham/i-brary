@@ -135,6 +135,24 @@ footer {
     background-color:#1a237e40;
 }
 
+footer .icon {
+    color: #4b5f69;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer li a {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: #4b5f69;
+    font-weight: 600;
+}
+
+footer li {
+    display: inline-block;
+    
+}
 
 /* Over riding materialize custm styles in the input fields in all forms */
 
