@@ -1,32 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="container-fluid">
+	<div class="row valign-wrapper">
+		<div class="col s12 valign">
+			<h2 class="mainHeading center">Welcome to I-Brary!</h2>
+			<p class="homePageText center">A site designed </p>
+		</div>
+	</div>
+</div>
+
 
 <div class="container-fluid">
 	<div class="row valign-wrapper">
-        <div class="col s12 m4 valign">
+		<div class="col s12 m4 valign">
 			<h3 class="topPicksHeading center">Top Picks of the Week</h3>
-            <p class="homePageText carouselText center">Every week we pick the top picks of your uploads and put them center stage!</p>
-        </div>
-			<div class="carousel col s12 m8">
-				<a class="carousel-item" href="#one!">
-					<img src="{{url_for('static', filename='images/book1.jpg')}}">
+			<p class="homePageText carouselText center">Every week we pick the top picks of your uploads and put them
+				center stage!</p>
+		</div>
+		<div class="carousel col s12 m8">
+			<a class="carousel-item" href="#one!">
+				<img src="{{url_for('static', filename='images/book1.jpg')}}" alt="Image of a book">
                 </a>
-					<a class="carousel-item" href="#two!">
-						<img src="{{url_for('static', filename='images/book2.jpg')}}">
+				<a class="carousel-item" href="#two!">
+					<img src="{{url_for('static', filename='images/book2.jpg')}}" alt="Image of a book">
                 </a>
-						<a class="carousel-item" href="#three!">
-							<img src="{{url_for('static', filename='images/book3.jpg')}}">
+					<a class="carousel-item" href="#three!">
+						<img src="{{url_for('static', filename='images/book3.jpg')}}" alt="Image of a book">
                 </a>
-							<a class="carousel-item" href="#four!">
-								<img src="{{url_for('static', filename='images/book5.jpg')}}">
+						<a class="carousel-item" href="#four!">
+							<img src="{{url_for('static', filename='images/book5.jpg')}}" alt="Image of a book">
                 </a>
-								<a class="carousel-item" href="#five!">
-									<img src="{{url_for('static', filename='images/book6.jpg')}}">
+							<a class="carousel-item" href="#five!">
+								<img src="{{url_for('static', filename='images/book6.jpg')}}" alt="Image of a book">
                 </a>
-			</div>
 		</div>
 	</div>
+</div>
 
 <hr class="block-divider">
 
@@ -34,10 +44,10 @@
 	<h2 class="sharedByYouHeading center">Shared By You..</h2>
 	<div class="row">
 		{% for book in books %}
-		<div id="card" class="col s12 m4 l3 center flexbox">
+		<div id="card" class="col s12 m4 l3 xl2 center flexbox">
 			<div class="card hoverable center-block grey lighten-4">
 				<div class="card-image">
-					<img src= "{{book.img_url}}" alt="Front page of Atomic Habits">
+					<img src= "{{book.img_url}}" alt="Image of a book">
                     </div>
 					<div class="card-content title-content">
 						<span class="card-title grey-text text-darken-4">{{book.book_name}}</span>
@@ -65,9 +75,10 @@
 	<div class="container">
 		<div class="row center">
 			<div class="col s12">
-            <h3 class="center">Want to share your own favourite books?</h3>
-                <p class="homePageText">Create an account in seconds and upload your own books. Build your own repotoire in your very own 'My Books' view, 
-                or choose 'Share', and your book upload will appear on the homepage!</p>
+				<h3 class="center">Want to share your own favourite books?</h3>
+				<p class="homePageText">Create an account in seconds and upload your own books. Build your own repotoire
+					in your very own 'My Books' view,
+					or choose 'Share', and your book upload will appear on the homepage!</p>
 			</div>
 		</div>
 	</div>
