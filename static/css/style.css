@@ -76,7 +76,6 @@ nav .brand-logo {
 
 .card .card-content {
     padding: 10px;
-    overflow-y: scroll;
 }
 
 .card .card-content .title-content {
@@ -105,7 +104,6 @@ nav .brand-logo {
 }
 
 .card .card-content .tab-content {
-    overflow-y: scroll;
     height: 100px;
 }
 
