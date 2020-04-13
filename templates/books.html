@@ -4,11 +4,12 @@
 
 
     <div class="container-fluid">
+    <h3 class="center">Your Book Collection</h3>
 	    <div class="row">
-        <h3 class="center">Your Book Collection</h3>
+        
         <hr class="block-divider">
         {% for book in books %}
-		    <div id="card" class="col s12 m4 l3 offset-l4 center flexbox">
+		    <div id="card" class="col s12 m4 l3 flexbox">
 			    <div class="card hoverable center-block">
 				    <div class="card-image">
                         <img src= "{{book.img_url}}" alt="Front page of Atomic Habits">
