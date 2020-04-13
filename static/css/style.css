@@ -252,30 +252,30 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
     .carousel .carousel-item {
         padding-top: 45px;
-    padding-right: 10px;
-    padding-left: 10px;
-    width: 100px;
-    height: 200px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100px;
+        height: 200px;
 }
 
 }
 
 @media (min-width: 1024px) {
-    .carousel .carousel-item {
-    width: 175px;
-    height: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-}
-}
+        .carousel .carousel-item {
+        width: 175px;
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+    }
 
 @media (min-width: 2560px) {
-.carousel .carousel-item {
-    width: 300px;
-    height: 400px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 0px;
+    .carousel .carousel-item {
+        width: 300px;
+        height: 400px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 0px;
 
-}}
+    }}
