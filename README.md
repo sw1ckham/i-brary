@@ -55,11 +55,25 @@ to stay looking like books.
 
 ## Wireframes 
 
+All Wireframes were made using [Mock Plus](https://www.mockplus.com/)
+
+* [Home Page Desktop](https://ibb.co/5K21mqw)    
+* [My Books Desktop](https://ibb.co/DpCfWn6)
+* [Log in Desktop](https://ibb.co/3f9GVdH)
+* [Register Desktop](https://ibb.co/NjnygmY)
+* [Add Book Desktop](https://ibb.co/0fcKBF6)
+
+* [Home Page Mobile](https://ibb.co/bXJKL6p)    
+* [My Books Mobile](https://ibb.co/dpNb3Lj)
+* [Log in Mobile](https://ibb.co/X2LrHJL)
+* [Register Mobile](https://ibb.co/mFjGqbM)
+* [Add Book Mobile](https://ibb.co/xj2PQJG)
 
 
 ## Features
 
 + Nav Bar
+- 
 
 + Log In / Register options.
 
@@ -73,6 +87,14 @@ to stay looking like books.
 
 + Footer with Log/Register options, social links on the developer.
 
+## Features left to Implement
+
++ Search by Genre filter.
+
++ Able to save other books from the homepage into your own 'My Books' view.
+
++ Ability to buy/download the books on the homepage.
+
 
 ## Technologies used
 
@@ -80,19 +102,19 @@ to stay looking like books.
 * CSS3
 * Python
 
-* MongoDB
+* [MongoDB](https://www.mongodb.com/)
 
-* Materialize
+* [Materialize](https://materializecss.com/)
 * Jquery
 * Flask
 * PyMongo
 * Brycpyt
 
-* Google Fonts
-* Font Awesome
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
 
-* GitPod
-* GitHub
+* [GitPod](https://gitpod.io/workspaces/)
+* [GitHub](https://github.com/sw1ckham)
 
 * Git
 
@@ -106,19 +128,48 @@ CSS WC3 Markup Validation Service
 ###Bugs during developement
 
 1. The columns the cards from Materialize were in, were not centering inside their row.
-*Solution: Add a flexbox class to the column you need to center. Add custom styles to center. 
-https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row
+* [Solution](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row): Add a flexbox class to the column you need to center. Add custom styles to center. 
 
+2. Nav bar links on full screen stopped working mid production. 
+* [Solution] - I don't know yet
+
+3. Cards changed height when card content grew larger than it's height - scroll bar came up but didn't work. 
+* [Solution] - I don't know yet 
+
+4. Edit book button? 
+* [Solution] I don't know yet
 
 
 ## Deployment
 
-I developed this project using the GitPod, committing to Git and pushing to GitHub via the locally installed Git commands. 
+#### I developed this project using the GitPod, committing to Git and pushing to GitHub via the locally installed Git commands. 
 
-The following steps run through how I deployed this project to heroku. https://dashboard.heroku.com/
+#### The following steps are how to create an app in heroku and connect it to 
 
-- Login to heroku
-- 
+- Login to heroku and go into your personal apps.
+- Click **New** in the top right corner and create a new app, pick your closest region.
+- In your CLI associate the heroku application as our remote master branch - heroku git:remote - a [app name]
+
+#### The following steps run through how I deployed this project to [Heroku.](https://dashboard.heroku.com/) 
+
+- Add a requirements file (list of applications heroku requires to run the app) - **pip3 freeze --local > requirements.txt**
+- Git add and commit requirements file
+- Add a Procfile (we need to tell heroku which file is used as our entry point to the app) - **echo web: python app.py > Procfile**
+- Git add and commit requirements file
+- Push to Github and Heroku - **git push origin master && git push heroku master**
+- Tell Heroku to get the app up and running - **heroku ps:scale web=1**
+- Go to settings in Heroku - Reveal config vars - Put in IP and PORT values (remember if the values are IP: 0.0.0.0, PORT: 5000)
+- Open app. 
+
+#### Running this project locally... 
+
+1. Log into your GitHub
+2. Find the repository via this link [I-brary](https://github.com/sw1ckham/i-brary)
+3. Click on **clone or download**, copy the clone URL under **clone with HTTPS**.
+4. Open up your IDE, and open **git bash**
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type **git clone**, and then paste the URL you copied. example: **$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY**
+7. Press Enter. Your local clone will be created.
 
 ## Credits
 
@@ -128,18 +179,17 @@ All content written in this project was written by the developer.
 
 ### Media
 
-I sourced all photos for the books from online mainly google images and copied the image url. 
+- I sourced all photos for the books from online mainly google images and copied the image url. 
 
-All icons came from Materialize's library https://materializecss.com/icons.html
+- All icons came from [Materialize's library](https://materializecss.com/icons.html) 
 
 ### Code 
-materializecss.com/cards.html
-https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row -- Helped center cards on index.html
-https://www.cssmatic.com/box-shadow -- For box shadow on nav bar and cards
-https://materializecss.com/icons.html
-https://materializecss.com/cards.html
+* Retrieved the [code](https://materializecss.com/cards.html) for my books cards from materialze and Edited.  
+* This [Stack Overflow post](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row) helped me center the cards on index.html.*
+* I used [CSS matic](https://www.cssmatic.com/box-shadow)
+
 
 ### Acknowledgements
 
-Thank you very much to my mentor Spencer who helped me throughout. Also to the student care tutors (especially Tim!). 
+Thank you very much to my mentor Spencer who helped me throughout. Also to the student care tutors and 'Igor' on Slack who was always quick to lend a hand. 
 
