@@ -17,17 +17,23 @@ main {
     font-family: 'Playfair Display', serif;
     color: #4b5f69;
     padding-top: 20px;
+    font-size: 2.5rem;
 }
 
 .sharedByYouHeading {
     font-family: 'Playfair Display', serif;
     padding-top: 25px;
     color: #4b5f69;
+    font-size: 2.5rem;
 }
 
 h3 {
     font-family: 'Playfair Display', serif;
     color: #4b5f69;
+}
+
+.homePageText {
+    font-size: 0.8rem;
 }
 
 /*-- NavBar --*/
@@ -227,6 +233,15 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 200px;
 }
 
+}
+
+@media (min-width: 1024px) {
+    .carousel .carousel-item {
+    width: 175px;
+    height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 }
 
 
