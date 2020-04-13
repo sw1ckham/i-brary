@@ -224,7 +224,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /*-- Media Queries -- */
 
 
-@media (min-wdith: 768px) {
+@media (min-width: 768px) {
 
     .carousel .carousel-item {
     padding-right: 30px;
