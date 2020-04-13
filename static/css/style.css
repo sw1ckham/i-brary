@@ -232,6 +232,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
      display: flex; 
      justify-content: center;  
      align-items: center; 
+     flex-wrap: wrap;
      }
 
 /*-- Block Dividers -- */
