@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div style="align: center;">
 
 # I-Brary
 
@@ -122,10 +122,19 @@ All Wireframes were made using [Mock Plus](https://www.mockplus.com/)
 
 I began my testing using.. 
 
-HTML WC3 Markup Validation Service.
-CSS WC3 Markup Validation Service
+- [HTML WC3 Markup Validation Service.](https://validator.w3.org/)
+- [CSS WC3 Markup Validation Service](https://jigsaw.w3.org/css-validator/)
 
-###Bugs during developement
+#### Mid-point CSS Validation bugs:
+
+- line 227 - min-wdith is an unknown vendor extension (Corrected typo)
+- line 213 - Same color for background-color and color (I kept this the same otherwise the line is not a block colour.)
+
+#### Mid-point HTML Validation bugs:
+
+- Throughout all my html pages I had forgotton to add an alt tag to my images (Corrected)
+
+### Bugs during developement
 
 1. The columns the cards from Materialize were in, were not centering inside their row.
 * [Solution](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row): Add a flexbox class to the column you need to center. Add custom styles to center. 
