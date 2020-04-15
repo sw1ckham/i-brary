@@ -64,7 +64,7 @@ def register():
 @app.route('/show_books', methods=["POST", "GET"])
 def show_books():
     username = session['user_username']
-    return render_template('books.html', books=mongo.db.books.find({"added_by": username}))
+    return render_template('books.html', books=mongo.db.books.find({"added_by": username})) # Only show books that was been uploaded by the username logged in
 
 
 
@@ -92,6 +92,7 @@ def update_book(book_id):
     books = mongo.db.books
     books.update({'_id': ObjectId(book_id)},
     {
+        'added_by': request.form.get('added_by'),
         'book_name': request.form.get('book_name'),
         'book_author': request.form.get('book_author'),
         'book_genre': request.form.get('book_genre'),
