@@ -145,8 +145,15 @@ I began my testing using..
 3. Cards changed height when card content grew larger than it's height - scroll bar came up but didn't work. 
 * [Solution] - I don't know yet 
 
-4. Edit book button? 
-* [Solution] I don't know yet
+4. Edit book function, when you edit a book, they book would disappear. 
+* [Solution] I needed to add a 'username' field in the form, and in tell the function to pull the 'added by' username from the form and fill
+that field in the database. Once I made those changes, the new edited version had the same username in the 'added_by' field as before and therefore
+showed up correctly on the 'My Books' page with the correct changes made. 
+
+5. Following from the bug above, I now need to make sure all fields are required, otherwise the book may not show in 'My Books', and the display will not look good. 
+I added 'required' to the end of each input but this did not work. 
+*[Solutiion](https://stackoverflow.com/questions/17966390/html5-required-attribute-seems-not-working) - I found a stack overflow post voicing the same bug, 
+the solution was to close the input tags properly /> 
 
 
 ## Deployment
