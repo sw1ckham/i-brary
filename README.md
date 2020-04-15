@@ -24,13 +24,13 @@ I want to have a place online I can store my favourite books and also get inform
 
 As a user I want...
 
-*To be able to register quickly without the site taking any unneccesary information.
-*To be able to find new books I haven't read before.
-*To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
-*To be able to navigate around the site with ease.
-*To be able to edit or delete my added books with ease.
-*To know that I am the only person able to edit my books that I have added.
-*To know my books will be saved when I log out, so when I revisit the site, my books are still there.
+* To be able to register quickly without the site taking any unneccesary information.
+* To be able to find new books I haven't read before.
+* To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
+* To be able to navigate around the site with ease.
+* To be able to edit or delete my added books with ease.
+* To know that I am the only person able to edit my books that I have added.
+* To know my books will be saved when I log out, so when I revisit the site, my books are still there.
 
 
 ### Design Choices
@@ -139,21 +139,47 @@ I began my testing using..
 1. The columns the cards from Materialize were in, were not centering inside their row.
 * [Solution](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row): Add a flexbox class to the column you need to center. Add custom styles to center. 
 
-2. Nav bar links on full screen stopped working mid production. 
-* [Solution] - I don't know yet
-
-3. Cards changed height when card content grew larger than it's height - scroll bar came up but didn't work. 
-* [Solution] - I don't know yet 
-
-4. Edit book function, when you edit a book, they book would disappear. 
+2. Edit book function, when you edit a book, they book would disappear. 
 * [Solution] I needed to add a 'username' field in the form, and in tell the function to pull the 'added by' username from the form and fill
 that field in the database. Once I made those changes, the new edited version had the same username in the 'added_by' field as before and therefore
 showed up correctly on the 'My Books' page with the correct changes made. 
 
-5. Following from the bug above, I now need to make sure all fields are required, otherwise the book may not show in 'My Books', and the display will not look good. 
+3. Following from the bug above, I now need to make sure all fields are required, otherwise the book may not show in 'My Books', and the display will not look good. 
 I added 'required' to the end of each input but this did not work. 
 *[Solutiion](https://stackoverflow.com/questions/17966390/html5-required-attribute-seems-not-working) - I found a stack overflow post voicing the same bug, 
 the solution was to close the input tags properly /> 
+
+4. The height of my cards. The height of the card was changing dependant on how much text you wrote in the 'comments' sections. This was a problem
+as design wise, it did not look good all the cards different heights. Also the cards overspill into other containers.
+* Solution - Set a max charactor limit on each comments input. I found out what height the card was when all the charactors were used and set all cards
+to be that height. 
+
+#### Client Stories Testing
+
+* To be able to register quickly without the site taking any unneccesary information.
+- When signing up to the site I am currently only asking for a 'Username' and 'Password' to set up. As there is no purchasing from the site, I currently do not need anymore
+of their personal information. 
+* To be able to find new books I haven't read before.
+- On the homepage is a library of all the books users have uploaded and decided to share. 
+* To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
+- Each book is displayed on a card, on this card are tabs displaying more information about the books. These fields have been set as 'required', so there will always be
+Genre and Rating information on each book on the site. 
+* To be able to navigate around the site with ease.
+- The site's navigation bar is fixed therefore it is very obvious how to navigate from page to page. Also there are options to 'Log In' and 'Register' in the footer.
+* To be able to edit or delete my added books with ease.
+- In the 'My Books' view, each book has an 'Edit' or 'Delete' button, when you choose to edit a book, it is required to input your username, this way the book will stay in 
+your 'My Books' view, and replace the old version of the book. 
+* To know that I am the only person able to edit my books that I have added.
+- The Edit and Delete buttons only show up in the 'My Books' view, and you can only see 'My Books' when you are logged in. The books shows in the 'My Books' view, are only
+the books you have uploaded whilst being logged in. 
+* To know my books will be saved when I log out, so when I revisit the site, my books are still there.
+
+#### Manual Testing
+
+
+
+#### Bugs Disovered during testing
+
 
 
 ## Deployment
@@ -202,8 +228,8 @@ All content written in this project was written by the developer.
 ### Code 
 * Retrieved the [code](https://materializecss.com/cards.html) for my books cards from materialze and Edited.  
 * This [Stack Overflow post](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row) helped me center the cards on index.html.*
-* I used [CSS matic](https://www.cssmatic.com/box-shadow)
-
+* I used [CSS matic](https://www.cssmatic.com/box-shadow) to create my box shadows
+* I used [W3 Schools](https://www.w3schools.com/tags/att_textarea_maxlength.asp) to help me work out how to apply a max-length to a text area.
 
 ### Acknowledgements
 
