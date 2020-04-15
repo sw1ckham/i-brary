@@ -3,50 +3,53 @@
 {% block content %}
 
 
-<div class="container center">
-	<h3 class="heading">Add Book</h3>
+<div class="container">
+	<h3 class="center">Add Book</h3>
 	<div class="row">
 		<form action="{{ url_for('insert_book') }}" method="POST" class="col s12">
             <div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">book</i>
-					<input id="added_by" name="added_by" type="text" class="validate">
+					<input id="added_by" name="added_by" type="text" required />
 					<label for="added_by">Username</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">book</i>
-					<input id="book_name" name="book_name" type="text" class="validate">
+					<input id="book_name" name="book_name" type="text" required />
 					<label for="book_name">Book Name</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">local_library</i>
-					<input id="book_author" name="book_author" type="text" class="validate">
+					<input id="book_author" name="book_author" type="text" required />
 					<label for="book_author">Author Name</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">import_contacts</i>
-					<input id="book_genre" name="book_genre" type="text" class="validate">
+					<input id="book_genre" name="book_genre" type="text" required />
 					<label for="book_genre">Genre</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s12 popup" onclick="myPopUp()" >
 					<i class="material-icons prefix">portrait</i>
-					<input id="img_url" name="img_url" type="text" class="validate">
+                    <span class="popuptext" id="myPopup"></span>
+					<input id="img_url" name="img_url" type="text" required />
 					<label for="img_url">Image URL</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s12 ">
 					<i class="material-icons prefix">rate_review</i>
-					<input id="book_rating" name="book_rating" type="tel" class="validate">
-					<label for="book_rating">Rating</label>
+                    <label for="book_rating">Rating</label>
+					<p class="range-field">
+						<input type="range" id="book_rating" name="book_rating" min="0" max="10" required />
+                    </p>	
 				</div>
 			</div>
 			<div class="row">
@@ -56,7 +59,7 @@
 					<label for="book_comments">Comments</label>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row center">
 				<div class="switch">
 					<label>
                     <input id="book_share" name="book_share" type="checkbox">
@@ -65,7 +68,7 @@
                     </label>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row center">
 				<button class="btn waves-effect waves-light indigo darken-4" type="submit" name="action">Add Book
                     <i class="material-icons right">send</i>
                 </button>
