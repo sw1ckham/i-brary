@@ -73,7 +73,6 @@ All Wireframes were made using [Mock Plus](https://www.mockplus.com/)
 ## Features
 
 + Nav Bar
-- 
 
 + Log In / Register options.
 
@@ -140,13 +139,13 @@ I began my testing using..
 * [Solution](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row): Add a flexbox class to the column you need to center. Add custom styles to center. 
 
 2. Edit book function, when you edit a book, they book would disappear. 
-* [Solution] I needed to add a 'username' field in the form, and in tell the function to pull the 'added by' username from the form and fill
+* Solution - I needed to add a 'username' field in the form, and in tell the function to pull the 'added by' username from the form and fill
 that field in the database. Once I made those changes, the new edited version had the same username in the 'added_by' field as before and therefore
 showed up correctly on the 'My Books' page with the correct changes made. 
 
 3. Following from the bug above, I now need to make sure all fields are required, otherwise the book may not show in 'My Books', and the display will not look good. 
 I added 'required' to the end of each input but this did not work. 
-*[Solutiion](https://stackoverflow.com/questions/17966390/html5-required-attribute-seems-not-working) - I found a stack overflow post voicing the same bug, 
+* [Solution](https://stackoverflow.com/questions/17966390/html5-required-attribute-seems-not-working) - I found a stack overflow post voicing the same bug, 
 the solution was to close the input tags properly /> 
 
 4. The height of my cards. The height of the card was changing dependant on how much text you wrote in the 'comments' sections. This was a problem
