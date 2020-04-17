@@ -153,6 +153,9 @@ as design wise, it did not look good all the cards different heights. Also the c
 * Solution - Set a max charactor limit on each comments input. I found out what height the card was when all the charactors were used and set all cards
 to be that height. 
 
+5. The main heading 'Welcome to I-brary' would break at I-brary due to the hiphen.
+* [Solution](https://css-tricks.com/forums/topic/prevent-word-breaks/) I copy and pasted a non-breaking-hyphen entity from the post linked. 
+
 #### Client Stories Testing
 
 * To be able to register quickly without the site taking any unneccesary information.
