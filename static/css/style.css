@@ -50,7 +50,8 @@ h3 {
 }
 
 .homePageText {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding-top: 10px;
 }
 
 /*-- NavBar --*/
@@ -91,6 +92,8 @@ nav ul li a {
 
 .card .card-content {
     padding: 10px;
+    font-family: 'Playfair Display';
+    font-weight: 600;
 }
 
 .card .card-content .title-content {
@@ -102,6 +105,11 @@ nav ul li a {
     overflow-x: visible; 
     overflow-y: visible;
 }
+
+.tabs .indicator {
+    background-color: #1a237e40;
+}
+
 .card-tabs .tabs .tab a {
     padding: 0;
     color: #4b5f69;
@@ -131,11 +139,7 @@ nav ul li a {
 }
 
 /*--Buttons--*/ 
-
-.arrowIcon {
-    font-size: 3rem;
-    color: #4231a2db;
-}  
+  
 
 .buttons {
     padding-top: 10px;
@@ -210,6 +214,12 @@ input[type=text]:not(.browser-default),
     border-bottom: 1px solid #2503e038;
 }
 
+
+.arrowIcon {
+    font-size: 3rem;
+    color: #1a237e40;
+}
+
 /*labels*/
 
 textarea.materialize-textarea:focus:not([readonly])+label,
@@ -245,61 +255,6 @@ input[type=range]+.thumb.active,
 input[type=range]+.thumb {
     background-color: #4231a2db;
     margin-left: 93px!important;
-}
-
-/* Pop Up for code from https://www.w3schools.com/howto/howto_js_popup.asp */
-
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
 }
 
 
@@ -346,6 +301,14 @@ input[type=range]+.thumb {
 
 }
 
+.block-dividerHome {
+    width: 30%;
+    height: 1px;
+    color: #4b5f69;
+    background-color: #4b5f69;
+    border-style: none;
+}
+
 /*-- Media Queries -- */
 
 
@@ -367,6 +330,18 @@ input[type=range]+.thumb {
         height: 200px;
         padding-left: 20px;
         padding-top: 0px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .subheading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .homePageText {
+        font-size: 1.2rem;
     }
 }
 
