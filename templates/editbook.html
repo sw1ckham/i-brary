@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!--Form to edit book-->
 
 <div class="container">
 	<h3 class="center">Edit Book</h3>
@@ -45,10 +46,10 @@
 			<div class="row">
 				<div class="input-field col s12 ">
 					<i class="material-icons prefix">rate_review</i>
-                    <label for="book_rating">Rating</label>
+					<label for="book_rating">Rating</label>
 					<p class="range-field">
 						<input type="range" id="book_rating" value="{{book.book_rating}}" name="book_rating" min="0" max="10" required />
-                    </p>	
+                    </p>
 				</div>
 			</div>
 			<div class="row">
