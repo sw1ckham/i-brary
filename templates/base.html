@@ -15,14 +15,32 @@
 
 <body>
 
-	<header>
+	<div id="page-container">
+		<div id="content-wrap">
+			<header>
 
-    <div class="navbar-fixed">
-		<nav class="indigo darken-4">
-			<div class="nav-wrapper">
-				<a href="{{url_for('index')}}" class="brand-logo center">I-Brary</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
+				<div class="navbar-fixed">
+					<nav class="indigo darken-4">
+						<div class="nav-wrapper">
+							<a href="{{url_for('index')}}" class="brand-logo center">I-Brary</a>
+							<a href="#" data-target="mobile-demo"
+								class="sidenav-trigger"><i class="material-icons">menu</i></a>
+							<ul class="right hide-on-med-and-down">
+								<li><a href="{{url_for('index')}}">Home</a></li>
+								{% if 'user_username' not in session %}
+								<li><a href="{{url_for('show_login')}}">Log In</a></li>
+								<li><a href="{{url_for('show_register')}}">Register</a></li>
+								{% else %}
+								<li><a href="{{url_for('add_book')}}">Add Book</a></li>
+								<li><a href="{{url_for('show_books')}}">My Books</a></li>
+								<li><a href="{{url_for('logout')}}">Log Out</a></li>
+								{% endif %}
+							</ul>
+						</div>
+					</nav>
+				</div>
+
+				<ul class="sidenav" id="mobile-demo">
 					<li><a href="{{url_for('index')}}">Home</a></li>
 					{% if 'user_username' not in session %}
 					<li><a href="{{url_for('show_login')}}">Log In</a></li>
@@ -33,63 +51,52 @@
 					<li><a href="{{url_for('logout')}}">Log Out</a></li>
 					{% endif %}
 				</ul>
-			</div>
-		</nav>
-    </div>
 
-		<ul class="sidenav" id="mobile-demo">
-			<li><a href="{{url_for('index')}}">Home</a></li>
-            {% if 'user_username' not in session %}
-			<li><a href="{{url_for('show_login')}}">Log In</a></li>
-            <li><a href="{{url_for('show_register')}}">Register</a></li>
-            {% else %}
-			<li><a href="{{url_for('add_book')}}">Add Book</a></li>
-			<li><a href="{{url_for('show_books')}}">My Books</a></li>
-			<li><a href="{{url_for('logout')}}">Log Out</a></li>
-            {% endif %}
-		</ul>
+			</header>
 
-	</header>
+			{% block content %}
+			<main>
 
-	{% block content %}
-	<main>
+			</main>
+			{% endblock %}
 
-	</main>
-	{% endblock %}
-
-
-
-	<footer class="page-footer">
-		<div class="container">
-			<div class="row">
-				
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Become part of the Community</h5>
-					<ul>
-						<li><a class="" href="{{url_for('show_register')}}">Register</a></li>
-					</ul>
-				</div>
-                <div class="col l6 s12">
-					<h5 class="white-text">Connect</h5>
-                    <a href="https://www.linkedin.com/in/sophie-wickham-604359146/" target="_blank"><i class="icon fab fa-linkedin-in fa-2x"></i></a>
-                    <a href="https://github.com/sw1ckham" target="_blank"><i class="icon fab fa-github fa-2x"></i></a>
-				</div>
-			</div>
 		</div>
-		<div class="footer-copyright">
+
+		<footer class="page-footer">
 			<div class="container">
-				© 2020 Website Developed by Sophie Wickham
-			</div>
-		</div>
-	</footer>
+				<div class="row">
 
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Become part of the Community</h5>
+						<ul>
+							<li><a class="" href="{{url_for('show_register')}}">Register</a></li>
+						</ul>
+					</div>
+					<div class="col l6 s12">
+						<h5 class="white-text">Connect</h5>
+						<a href="https://www.linkedin.com/in/sophie-wickham-604359146/"
+							target="_blank"><i class="icon fab fa-linkedin-in fa-2x"></i></a>
+						<a href="https://github.com/sw1ckham"
+							target="_blank"><i class="icon fab fa-github fa-2x"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2020 Website Developed by Sophie Wickham
+				</div>
+			</div>
+		</footer>
+
+
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/1d7b4fd179.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/1d7b4fd179.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>
-        $(document).ready(function(){
+		$(document).ready(function(){
             $('.tabs').tabs();
             $('.sidenav').sidenav();
             $('.carousel').carousel();
