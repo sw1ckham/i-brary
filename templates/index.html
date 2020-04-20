@@ -16,21 +16,24 @@
 <div class="container-fluid">
 	<div class="row center">
 		<div class="col s12 m6">
-        <h4 class="subheading">Already a member?</h4>
-        <p class="homePageText">Add a book you have read, or are currently reading, and let our community know what you thoughts.</p>
-        </div>
+			<h4 class="subheading">Already a member?</h4>
+			<p class="homePageText">Add a book you have read, or are currently reading, and let our community know what
+				you thoughts.</p>
+		</div>
 		<div class="col s12 m6">
-        <h4 class="subheading">Not a memeber? Register today!</h4>
-        <p class="homePageText">Become part of our community today... read and write reviews, find new books to read and share your own. </p>
-        </div>
+			<h4 class="subheading">Not a memeber? Register today!</h4>
+			<p class="homePageText">Become part of our community today... read and write reviews, find new books to read
+				and share your own. </p>
+		</div>
 	</div>
 </div>
 
 <hr class="block-divider">
 
-<div class="container-fluid">
+
+<div class="container">
 	<div class="row valign-wrapper flexbox">
-		<div class="col s12 m5 valign">
+		<div class="col s12 m5 valign topPicks">
 			<h3 class="topPicksHeading center">Top Picks of the Week</h3>
 			<p class="homePageText carouselText center">Every week we pick the top picks of your uploads and put them
 				center stage!</p>
@@ -55,13 +58,14 @@
 	</div>
 </div>
 
+
 <hr class="block-divider">
 
-<div class="container-fluid">
+<div class="container">
 	<h2 class="sharedByYouHeading center">Shared By You..</h2>
 	<div class="row">
 		{% for book in books %}
-		<div id="card" class="col s12 m4 l3 xl2 center flexbox">
+		<div id="card" class="col s12 m4 xl3 center flexbox ">
 			<div class="card hoverable center-block grey lighten-4">
 				<div class="card-image">
 					<img src= "{{book.img_url}}" alt="Image of a book">
@@ -76,7 +80,8 @@
 							<li class="tab col s4"><a href="#test6{{loop.index}}">Rating</a></li>
 						</ul>
 					</div>
-					<div class="card-content grey lighten-4 tabs-content">
+
+					<div class="card-content grey lighten-4 tabs-content valign center-block">
 						<div id="test4{{loop.index}}">{{book.book_author}}</div>
 						<div id="test5{{loop.index}}">{{book.book_genre}}</div>
 						<div id="test6{{loop.index}}">{{book.book_rating}}/10 - {{book.book_comments}}</div>
