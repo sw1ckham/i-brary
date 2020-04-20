@@ -30,11 +30,15 @@ main {
     font-size: 2.5rem;
 }
 
+#subcontainer {
+    padding: 20px;
+}
+
 .mainHeading {
     padding-top: 25px;
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
-    color: #4b5f69;
+    color: #40525a;
 }
 
 h3 {
@@ -52,6 +56,8 @@ h3 {
 .homePageText {
     font-size: 1rem;
     padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .welcomeHeading {
@@ -181,7 +187,7 @@ footer {
 }
 
 footer .icon {
-    color: #4b5f69;
+    color: #fff;
     padding: 10px;
     cursor: pointer;
 }
@@ -190,8 +196,12 @@ footer li a {
     cursor: pointer;
     padding: 5px;
     font-size: 1.5rem;
-    color: #4b5f69;
+    color: #fff;
     font-weight: 600;
+}
+
+.footerHeading {
+    color: #4b5f69;
 }
 
 footer li {
