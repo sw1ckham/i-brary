@@ -54,6 +54,14 @@ h3 {
     padding-top: 10px;
 }
 
+.welcomeHeading {
+    padding-bottom: 40px;
+}
+
+.registerHeading {
+    padding-bottom: 40px;
+}
+
 /*-- NavBar --*/
 
 /* box shadow code from https://www.cssmatic.com/box-shadow */
@@ -130,6 +138,11 @@ nav ul li a {
     height: 100px;
 }
 
+.card .card-content {
+    height: 80px;
+    margin: 0 auto;
+}
+
 .card-image img {
     height: 300px;
 }           
@@ -147,7 +160,17 @@ nav ul li a {
 
 /* --- Footer ---*/
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 320px;
+}
+
 footer {
+    position: absolute;
     bottom: 0;
     text-align: center;
     width: 100%;
@@ -176,13 +199,13 @@ footer li {
     
 }
 
-/* Over riding materialize custm styles in the input fields in all forms */
+/* Over riding custom styles in the input fields in all forms */
 
 input[type=password]:not(.browser-default),
 input[type=text]:not(.browser-default),
 .input-field .prefix ~ input,
-.input-field .prefix ~ textarea, {
-    border-bottom: 1px solid #4b5f69;
+.input-field .prefix ~ textarea {
+    border-bottom: 1px solid #c6c8ca;
 }
 
 .input-field .prefix {
@@ -235,7 +258,8 @@ input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 input[type=tel]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #4b5f69;
+    border-bottom: 1px solid #2503e038;
+    box-shadow: none;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after,
@@ -257,6 +281,27 @@ input[type=range]+.thumb {
     margin-left: 93px!important;
 }
 
+/* CSS to colour dot on the range selector fom materialize */
+
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #4231a2db;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #4231a2db;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #4231a2db;
+  }
+
+
+/* CSS to chnage the autofill background colour from https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #80a1bbb8 inset !important;
+}
 
 /*--- Carousel ---*/
 
@@ -279,15 +324,8 @@ input[type=range]+.thumb {
 
 .flexbox { 
      display: flex; 
-     justify-content: center;  
-     align-items: center; 
      flex-wrap: wrap;
-     }
-
-.flexboxMyBooks { 
-     justify-content: center;  
-     align-items: center; 
-     flex-wrap: wrap;
+     
 }
 
 /*-- Block Dividers -- */
@@ -322,6 +360,18 @@ input[type=range]+.thumb {
         height: 200px;
 }
 
+}
+
+@media (min-width:768px) {
+    .topPicks {
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .block-divider {
+        margin-top: 45px;
+    }
 }
 
 @media (min-width: 1024px) {
