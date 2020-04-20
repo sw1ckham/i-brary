@@ -156,6 +156,12 @@ to be that height.
 5. The main heading 'Welcome to I-brary' would break at I-brary due to the hiphen.
 * [Solution](https://css-tricks.com/forums/topic/prevent-word-breaks/) I copy and pasted a non-breaking-hyphen entity from the post linked. 
 
+6. On the 'Add Book' and 'Edit Book' forms, I inserted a range slide from materialize but could not work out how to chnage the colour of the dot underneath the thumb. 
+* [Solution](https://stackoverflow.com/questions/40534973/changing-the-color-of-the-range-slider-in-materializecss) The CSS needed was provided on this stack overflow post. 
+
+7. The autofill background colour Google Chrome had as a default didn't suit the design of the site. 
+* [Solution](https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete) Adding a few lines of css changing the default CSS. 
+
 #### Client Stories Testing
 
 * To be able to register quickly without the site taking any unneccesary information.
