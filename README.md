@@ -73,26 +73,32 @@ All Wireframes were made using [Mock Plus](https://www.mockplus.com/)
 ## Features
 
 + Nav Bar
+ The Nav Bar is fixed at all times, includes a logo and links to 'Home', 'Log In' and 'Register' when not logged in, and 'Home', 'Add Book', 'My Books' and 'Log Out' when not
+logged in. It also collapses on small and medium screens. 
 
 + Log In / Register options.
+ There are Log in and Registration options in both the collapsable nav bar, standard nav bar and in the footer. It is important for this site to have register and log in Features
+so you are able to add and save your own books. 
 
 + My books view.
+ The My books views allows you to store, edit and delete all the books you have uploaded. 
 
-+ Ability to add a book to your own view.
++ Ability to add a book to your own view through the use of a switch. 
+ Use to share a book onto the homepage or just store for your own purpose. 
 
-+ Ability to share that book for others to see on the homepage. 
-
-+ Ability to edit or delete any book you have previously added. 
-
-+ Footer with Log/Register options, social links on the developer.
++ Footer 
+ The Footer includes copyright information in regards to the site, social links taking you to the developers GitHub and LinkedIn and a Register option if you aren't already a member.
 
 ## Features left to Implement
 
 + Search by Genre filter.
+ Once the site is more established and therefore has more people uploading books, there will be a need to filter down the book choices via Genre.
 
 + Able to save other books from the homepage into your own 'My Books' view.
+ The goal of the site in the long run will be to essentially save and 'buy/download' therefore we will need an option to save a book into the 'My Books' view, very similar to a shopping cart in online shopping. 
 
 + Ability to buy/download the books on the homepage.
+ I would like my users to be able to watch advertisements and then download the book for a very small fee or preferably free. In the meantime I can provide a link to another site for my users to buy. 
 
 
 ## Technologies used
