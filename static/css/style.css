@@ -68,6 +68,10 @@ h3 {
     padding-bottom: 40px;
 }
 
+.favouriteHeading {
+    padding-top: 50px;
+}
+
 /*-- NavBar --*/
 
 /* box shadow code from https://www.cssmatic.com/box-shadow */

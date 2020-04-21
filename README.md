@@ -165,20 +165,20 @@ to be that height.
 #### Client Stories Testing
 
 * To be able to register quickly without the site taking any unneccesary information.
-- When signing up to the site I am currently only asking for a 'Username' and 'Password' to set up. As there is no purchasing from the site, I currently do not need anymore
+  When signing up to the site I am currently only asking for a 'Username' and 'Password' to set up. As there is no purchasing from the site, I currently do not need anymore
 of their personal information. 
 * To be able to find new books I haven't read before.
-- On the homepage is a library of all the books users have uploaded and decided to share. 
+  On the homepage is a library of all the books users have uploaded and decided to share. 
 * To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
-- Each book is displayed on a card, on this card are tabs displaying more information about the books. These fields have been set as 'required', so there will always be
-Genre and Rating information on each book on the site. 
+  Each book is displayed on a card, on this card are tabs displaying more information about the books. These fields have been set as 'required', so there will always be
+  Genre and Rating information on each book on the site. 
 * To be able to navigate around the site with ease.
-- The site's navigation bar is fixed therefore it is very obvious how to navigate from page to page. Also there are options to 'Log In' and 'Register' in the footer.
+  The site's navigation bar is fixed therefore it is very obvious how to navigate from page to page. Also there is an option to 'Register' in the footer.
 * To be able to edit or delete my added books with ease.
-- In the 'My Books' view, each book has an 'Edit' or 'Delete' button, when you choose to edit a book, it is required to input your username, this way the book will stay in 
+  In the 'My Books' view, each book has an 'Edit' or 'Delete' button, when you choose to edit a book, it is required to input your username, this way the book will stay in 
 your 'My Books' view, and replace the old version of the book. 
 * To know that I am the only person able to edit my books that I have added.
-- The Edit and Delete buttons only show up in the 'My Books' view, and you can only see 'My Books' when you are logged in. The books shows in the 'My Books' view, are only
+  The Edit and Delete buttons only show up in the 'My Books' view, and you can only see 'My Books' when you are logged in. The books shows in the 'My Books' view, are only
 the books you have uploaded whilst being logged in. 
 * To know my books will be saved when I log out, so when I revisit the site, my books are still there.
 

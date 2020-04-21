@@ -16,7 +16,7 @@
 		<hr class="block-divider">
 		{% for book in books %}
 		<div id="card" class="col s12 m4 l3 center flexbox">
-			<div class="card hoverable center-block">
+			<div class="card hoverable center">
 				<div class="card-image">
 					<img src= "{{book.img_url}}" alt="Front page of Atomic Habits">
                     </div>
@@ -33,7 +33,7 @@
 						<div id="test6{{loop.index}}">{{book.book_rating}}/10 - {{book.book_comments}}</div>
 					</div>
 				</div>
-				<div class="center buttons">
+				<div class="center-block buttons">
 					<a href="{{url_for('edit_book', book_id=book._id)}}"
 						class="waves-effect waves-light btn-small indigo darken-4">Edit</a>
 					<a href="{{url_for('delete_book', book_id=book._id)}}"

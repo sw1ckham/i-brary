@@ -65,7 +65,7 @@
 	<h2 class="sharedByYouHeading center">Shared By You..</h2>
 	<div class="row">
 		{% for book in books %}
-		<div id="card" class="col s12 m4 xl3 center flexbox ">
+		<div id="card" class="col s12 m4 xl3 center flexbox">
 			<div class="card hoverable center-block grey lighten-4">
 				<div class="card-image">
 					<img src= "{{book.img_url}}" alt="Image of a book">
@@ -81,7 +81,7 @@
 						</ul>
 					</div>
 
-					<div class="card-content grey lighten-4 tabs-content valign center-block">
+					<div class="card-content grey lighten-4 tabs-content valign center">
 						<div id="test4{{loop.index}}">{{book.book_author}}</div>
 						<div id="test5{{loop.index}}">{{book.book_genre}}</div>
 						<div id="test6{{loop.index}}">{{book.book_rating}}/10 - {{book.book_comments}}</div>
@@ -97,7 +97,7 @@
 	<div class="container">
 		<div class="row center">
 			<div class="col s12">
-				<h3 class="center">Want to share your own favourite books?</h3>
+				<h3 class="center favouriteHeading">Want to share your own favourite books?</h3>
 				<p class="homePageText">Create an account in seconds and upload your own books. Build your own repotoire
 					in your very own 'My Books' view,
 					or choose 'Share', and your book upload will appear on the homepage!</p>
