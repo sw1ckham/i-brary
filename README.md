@@ -194,6 +194,9 @@ the books you have uploaded whilst being logged in.
 
 #### Bugs Disovered during testing
 
+1. When on looking at the site on Google Dev tools on the responsive mode, the carousel on the front page doesn't seem to change size like it should when you change screen sizes.
+You have to refresh every time to see how the carousel actually looks on that screen size. Still have not solved this issue as it doesn't seem to be a problem with my code. 
+All sizes given to the carousel are correct and are user friendly and responsive on all screens. 
 
 
 ## Deployment
