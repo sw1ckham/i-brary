@@ -7,7 +7,9 @@
 <div class="container">
 
 <h3 class="center registerHeading">Please Register</h3>
-
+{% if message %}
+    {{ message }}
+{% endif %}
 <div class="row center">
 	<form method="POST" action="{{url_for('register')}}" class="col s12">
         <div class="row">
