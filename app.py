@@ -32,8 +32,9 @@ def login():
         if bcrypt.hashpw(request.form['user_password'].encode('utf-8'), login_user['user_password']) == login_user['user_password']:
             session['user_username'] = request.form['user_username']
             return redirect(url_for('index'))
-        
-    return 'Invalid username/password combination'  # Error message if user info isn't in the system. 
+    else:
+        invalid_user = 'Invalid username/password combination'
+    return render_template('login.html', message=invalid_user)  # Error message if user info isn't in the system. 
 
 
 @app.route('/show_register')  # For the register button
@@ -57,8 +58,9 @@ def register():
             session['user_username'] = request.form['user_username']
             return redirect(url_for('index'))
         else:
-            return 'This username already exists'
-    return render_template('books.html')
+            invalid_user = 'This username already exists'
+        return render_template('register.html', message=invalid_user)
+    
 
 
 @app.route('/show_books', methods=["POST", "GET"])
