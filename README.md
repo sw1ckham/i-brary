@@ -190,11 +190,55 @@ the books you have uploaded whilst being logged in.
 
 #### Manual Testing
 
+Below is a checklist completed by the developer and 2 third parties. The checklist was completed on all devise sizes. 
+
+1. Navbar/navigation
+* When not logged in, the navbar shows - 'Home', 'Log In', 'Register'.
+* Once registered or logged in, the navbar shows - 'Home', 'Add Book', 'My Books', 'Log Out'.
+* When viewing the site on medium or small screens, the navbar becomes a dropdown from a toggle button in the top left hand corner. 
+* At all times the Navbar is fixed to the top of the screen so you can see it at all times. 
+
+2. Footer
+* In the footer you have an linked called 'Register' that takes you to the 'Register Form'. 
+* There are also a GitHub and LinkedIn icon, when you click on the icons it opens a seperate browser taking you to the developers profiles. 
+* Above the footer is an up arrow, once clicked takes to back to the top of the homepage. 
+
+3. Log In
+* Try to Log In leaving one or/and both input fields empty - you will get an error message saying 'Please fill out this form'
+* Try to Log In with credentials having not registered yet - an error message appears saying 'Incorrect username/password'......!!??
+* Click on the link underneath the form 'Sign up here', you are taken to the registration page to sign up. 
+* Having already registered, try to log in with either the username or password inccorect - an error message appears saying 'Incorrect username/password', I haven't specified which for added security. 
+* Log in with your correct credentials - you are taken to the homepage and now have the option to 'Add Book' or view 'My Books' in the navbar. 
+
+4. Register
+* Try to Regitser leaving one or/and both input fields empty - you will get an error message saying 'Please fill out this form'
+* Try to register with a existing user log in credentials, both username and password, and then just the correct username, and just the correct password - you will get an error saying 'This username already exists'. 
+* Register as a new user with unique information, you will be taken to the homepage, you will have an 'Add Book' and a 'My Books' view, the 'My Books' view is empty. 
+* Fill out the 'Add Book' form, click share, log out, log back in with your new user information. You will see you added book in your 'My Books' view and on the homepage. 
+
+5. My Books
+* When in your 'My Books' view, you have 'Edit' and 'Delete' buttons below each of your book entries.
+* You click on 'Edit' and it takes you to an 'Edit Book' form, all of the original information autofilled.
+* You are able to change one or all fields. 
+* Try to Edit a book but leave one or/and more input fields empty - you will get an error message saying 'Please fill out this form'.
+* Once edited, click edit book, it takes you to your 'My Books' view with the new version of the book replacing the old. 
+* In 'My Books' click on 'Delete', the book disappears in 'My books' and also on the homepage. 
+
+6. Add Book
+* When you click on 'Add Book' in the navbar, it takes you to a form headed 'Add Book'
+* Try and submit the form with one of the input fields missing - you will get an error saying 'Please fill out this form'. Do this for every input field. You will get an error
+for every input field except, 'Rating' (as it's default is 5), Comments and 'Share' (as it's default is off).
+* Fill out the form correctly and click share, your new book will render in your 'My Books' view and the homepage. Do this again and do not share, the book will only render on
+your 'My Books' view. 
 
 
-#### Bugs Disovered during testing
+#### Bugs discovered during manual testing from a third party
 
-1. When on looking at the site on Google Dev tools on the responsive mode, the carousel on the front page doesn't seem to change size like it should when you change screen sizes.
+
+#### Bugs Disovered during manual testing from the developer
+
+1. TESTING RESPONSIVENESS 
+* When on looking at the site on Google Dev tools on the responsive mode, the carousel on the front page doesn't seem to change size like it should when you change screen sizes.
 You have to refresh every time to see how the carousel actually looks on that screen size. Still have not solved this issue as it doesn't seem to be a problem with my code. 
 All sizes given to the carousel are correct and are user friendly and responsive on all screens. 
 
