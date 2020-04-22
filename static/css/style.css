@@ -108,6 +108,11 @@ nav ul li a {
     box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
 }
 
+.warning {
+    color: red;
+    font-size: 14px;
+}
+
 .card .card-content {
     padding: 10px;
     font-family: 'Playfair Display';
@@ -333,6 +338,7 @@ input:-webkit-autofill:active  {
 
 .topPicksCarousel {
    margin: 0;
+   width: 80%;
 }
 
 
