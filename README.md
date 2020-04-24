@@ -1,4 +1,4 @@
-<div style="align: center;">
+<div style="text-align: center;">
 
 # I-Brary
 
@@ -24,7 +24,7 @@ I want to have a place online I can store my favourite books and also get inform
 
 As a user I want...
 
-* To be able to register quickly without the site taking any unneccesary information.
+* To be able to register quickly without the site taking any unnecessary information.
 * To be able to find new books I haven't read before.
 * To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
 * To be able to navigate around the site with ease.
@@ -36,21 +36,22 @@ As a user I want...
 ### Design Choices
 
 I have decided to go for a simple, professional design. The demographic of my users are readers that use the internet as a resource to source new books.
-This would be a large range of ages and backgrounds. Due to this I have stuck to a very classic look I think is already paired with English Literature.
+This would be a large range of ages and backgrounds. Due to this I have stuck to a very classic look that I think is already paired with English Literature.
 
-+ Font
-... The font I chose was 'Playfair Display' due to it's 'old timey' design lending itself to the 18th century. 
+1. Font
+* The font I chose was 'Playfair Display' due to it's 'old timey' design lending itself to the 18th century. 
 
-+ Colour
-... I chose Blue as my main colour because it is known as a very calm colour, reading is a peaceful activitie and so should looking into books online. 
-... Also there are a lot of colours and patterns on the covers of the books. I want the books to stand out and be the main feature on the page, therefore
-... light blue background worked very well as it brings any elements to the foreground. 
-... I chose a dark blue colour for the nav bar and the buttons. These are all points of contact for the user and I wanted them to stand out without
-... contrasting with the rest of the sit. 
+2. Colour
+* I chose Blue as my main colour because it is known as a very calm colour, reading is a peaceful activitie and so should looking into books online. 
+* Also there are a lot of colours and patterns on the covers of the books. I want the books to stand out and be the main feature on the page, therefore a 
+light blue background worked very well as it brings any elements to the foreground. 
+* I chose a dark blue colour for the nav bar and the buttons. These are all points of contact for the user and I wanted them to stand out without
+* contrasting with the rest of the sit. 
+* I chose white for the register and social buttons in the footer, they stand out in contrast to the background-colour of the footer. 
 
-+ Styling
-... I used the Materialize framework which kept the site clean and simple.
-... I decided not to curve off any edges on photos/cards, I want the site to have the resemblence of book corners throughout and the book images, 
+3. Styling
+* I used the Materialize framework which kept the site clean and simple.
+* I decided not to curve off any edges on photos/cards, I want the site to have the resemblence of book corners throughout and the book images, 
 to stay looking like books. 
 
 ## Wireframes 
@@ -84,9 +85,9 @@ so you are able to add and save your own books.
  The My books views allows you to store, edit and delete all the books you have uploaded. 
 
 + Ability to add a book to your own view through the use of a switch. 
- Use to share a book onto the homepage or just store for your own purpose. 
+ Used to share a book onto the homepage or just store for your own purpose. 
 
-+ Footer 
++ Footer.
  The Footer includes copyright information in regards to the site, social links taking you to the developers GitHub and LinkedIn and a Register option if you aren't already a member.
 
 ## Features left to Implement
@@ -117,6 +118,9 @@ so you are able to add and save your own books.
 
 * [Google Fonts](https://fonts.google.com/)
 * [Font Awesome](https://fontawesome.com/)
+* [Autoprefixer](https://autoprefixer.github.io/)
+* [The W3C Markup Validation Service](https://validator.w3.org/)
+* [The W3C Markup Validation Service](https://jigsaw.w3.org/css-validator/)
 
 * [GitPod](https://gitpod.io/workspaces/)
 * [GitHub](https://github.com/sw1ckham)
@@ -139,13 +143,22 @@ I began my testing using..
 
 - Throughout all my html pages I had forgotton to add an alt tag to my images (Corrected)
 
+#### Final HTML Validation bugs:
+
+-  The value of the for attribute of the label element must be the ID of a non-hidden form control.
+- Attribute required is only allowed when the input type is checkbox, date, datetime-local, email, file, month, number, password, radio, search, tel, text, time, url, or week.
+
+#### Final CSS Validation bugs:
+
+- Congratulations! No Error Found.
+
 ### Bugs during developement
 
 1. The columns the cards from Materialize were in, were not centering inside their row.
 * [Solution](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row): Add a flexbox class to the column you need to center. Add custom styles to center. 
 
-2. Edit book function, when you edit a book, they book would disappear. 
-* Solution - I needed to add a 'username' field in the form, and in tell the function to pull the 'added by' username from the form and fill
+2. Edit book function, when you edit a book, the book would disappear. 
+* Solution - I needed to add a 'username' field in the form, and in turn tell the function to pull the 'added by' username from the form and fill
 that field in the database. Once I made those changes, the new edited version had the same username in the 'added_by' field as before and therefore
 showed up correctly on the 'My Books' page with the correct changes made. 
 
@@ -170,23 +183,24 @@ to be that height.
 
 #### Client Stories Testing
 
-* To be able to register quickly without the site taking any unneccesary information.
-  When signing up to the site I am currently only asking for a 'Username' and 'Password' to set up. As there is no purchasing from the site, I currently do not need anymore
-of their personal information. 
-* To be able to find new books I haven't read before.
-  On the homepage is a library of all the books users have uploaded and decided to share. 
-* To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
-  Each book is displayed on a card, on this card are tabs displaying more information about the books. These fields have been set as 'required', so there will always be
+1. To be able to register quickly without the site taking any unneccesary information.
+* When signing up to the site I am currently only asking for a 'Username' and 'Password' to set up. As there is no purchasing from the site, I currently do not need anymore
+    of their personal information. 
+2. To be able to find new books I haven't read before.
+* On the homepage is a library of all the books users have uploaded and decided to share. 
+3. To be able to see the Genre and rating of new books so there is enough information for me to decide whether I would enjoy it. 
+* Each book is displayed on a card, on this card are tabs displaying more information about the books. These fields have been set as 'required', so there will always be
   Genre and Rating information on each book on the site. 
-* To be able to navigate around the site with ease.
-  The site's navigation bar is fixed therefore it is very obvious how to navigate from page to page. Also there is an option to 'Register' in the footer.
-* To be able to edit or delete my added books with ease.
-  In the 'My Books' view, each book has an 'Edit' or 'Delete' button, when you choose to edit a book, it is required to input your username, this way the book will stay in 
-your 'My Books' view, and replace the old version of the book. 
-* To know that I am the only person able to edit my books that I have added.
-  The Edit and Delete buttons only show up in the 'My Books' view, and you can only see 'My Books' when you are logged in. The books shows in the 'My Books' view, are only
-the books you have uploaded whilst being logged in. 
-* To know my books will be saved when I log out, so when I revisit the site, my books are still there.
+4. To be able to navigate around the site with ease.
+* The site's navigation bar is fixed therefore it is very obvious how to navigate from page to page. Also there is an option to 'Register' in the footer.
+5. To be able to edit or delete my added books with ease.
+* In the 'My Books' view, each book has an 'Edit' or 'Delete' button, when you choose to edit a book, it is required to input your username, this way the book will stay in 
+  your 'My Books' view, and replace the old version of the book. 
+6. To know that I am the only person able to edit my books that I have added.
+* The Edit and Delete buttons only show up in the 'My Books' view, and you can only see 'My Books' when you are logged in. The books shows in the 'My Books' view, are only
+  the books you have uploaded whilst being logged in. 
+7. To know my books will be saved when I log out, so when I revisit the site, my books are still there.
+* All books are save inthe MongoDB Atlas databse therefore will always be rendered to the site if added to the database. 
 
 #### Manual Testing
 
@@ -199,15 +213,15 @@ Below is a checklist completed by the developer and 2 third parties. The checkli
 * At all times the Navbar is fixed to the top of the screen so you can see it at all times. 
 
 2. Footer
-* In the footer you have an linked called 'Register' that takes you to the 'Register Form'. 
+* In the footer you have a link called 'Register' that takes you to the 'Register Form'. 
 * There are also a GitHub and LinkedIn icon, when you click on the icons it opens a seperate browser taking you to the developers profiles. 
-* Above the footer is an up arrow, once clicked takes to back to the top of the homepage. 
+* Above the footer is an up arrow, once clicked it takes you back to the top of the homepage. 
 
 3. Log In
 * Try to Log In leaving one or/and both input fields empty - you will get an error message saying 'Please fill out this form'
-* Try to Log In with credentials having not registered yet - an error message appears saying 'Incorrect username/password'......!!??
+* Try to Log In with credentials having not registered yet - an error message appears saying 'Incorrect username/password'.
 * Click on the link underneath the form 'Sign up here', you are taken to the registration page to sign up. 
-* Having already registered, try to log in with either the username or password inccorect - an error message appears saying 'Incorrect username/password', I haven't specified which for added security. 
+* Having already registered, try to log in with either the username inccorect - an error message appears saying 'This username does not exist'. I haven't specified which for added security. 
 * Log in with your correct credentials - you are taken to the homepage and now have the option to 'Add Book' or view 'My Books' in the navbar. 
 
 4. Register
@@ -231,9 +245,9 @@ for every input field except, 'Rating' (as it's default is 5), Comments and 'Sha
 * Fill out the form correctly and click share, your new book will render in your 'My Books' view and the homepage. Do this again and do not share, the book will only render on
 your 'My Books' view. 
 
-
 #### Bugs discovered during manual testing from a third party
 
+No bugs or problems from the third party manual testing.
 
 #### Bugs Disovered during manual testing from the developer
 
@@ -241,7 +255,8 @@ your 'My Books' view.
 * When on looking at the site on Google Dev tools on the responsive mode, the carousel on the front page doesn't seem to change size like it should when you change screen sizes.
 You have to refresh every time to see how the carousel actually looks on that screen size. Still have not solved this issue as it doesn't seem to be a problem with my code. 
 All sizes given to the carousel are correct and are user friendly and responsive on all screens. 
-
+* Solution - I spoke to my mentor Spencer Barriball about this, we think it is a bug within the carousel itself and I was told not to worry as it renders
+properly and has been styled properly on my side so will look fine on each devise for the user. 
 
 ## Deployment
 
@@ -291,8 +306,11 @@ All content written in this project was written by the developer.
 * This [Stack Overflow post](https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row) helped me center the cards on index.html.*
 * I used [CSS matic](https://www.cssmatic.com/box-shadow) to create my box shadows
 * I used [W3 Schools](https://www.w3schools.com/tags/att_textarea_maxlength.asp) to help me work out how to apply a max-length to a text area.
+* I used [Autoprefixer](https://autoprefixer.github.io/) to add broswer prefixes to my CSS code. 
 
 ### Acknowledgements
 
-Thank you very much to my mentor Spencer who helped me throughout. Also to the student care tutors and 'Igor' on Slack who was always quick to lend a hand. 
+Thank you very much to my mentor Spencer who helped me throughout. 
+Also to the student care tutors Tim, Stephen, Samantha, Cormac and Kevin. 
+'Igor' on Slack who was always quick to lend a hand. 
 
