@@ -5,14 +5,21 @@ html {
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: #80a1bbb8;
   }
 
 main {
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
 
 /*-- Headings ---*/
@@ -78,7 +85,6 @@ h3 {
 
 nav {
     -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
     z-index: 1;
 }
@@ -104,7 +110,6 @@ nav ul li a {
     position: relative;
     margin: auto;
     -webkit-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 29px -9px rgba(0,0,0,0.75);
 }
 
@@ -313,7 +318,7 @@ input[type=range]+.thumb {
   }
 
 
-/* CSS to chnage the autofill background colour from https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+/* CSS to change the autofill background colour from https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -325,15 +330,16 @@ input:-webkit-autofill:active  {
 /*--- Carousel ---*/
 
 .carousel {
-    /* width: 300px; */
     position: relative;
     margin-left: 0;
+    margin-bottom: 4%;
     height: 300px;
 }
 
 .carousel .carousel-item {
     width: 100px;
     height: 150px;
+    left: auto;
 }
 
 .topPicksCarousel {
@@ -344,11 +350,25 @@ input:-webkit-autofill:active  {
 
 /* --- Flexbox code taken from https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row to center card columns --- */
 
-.flexbox { 
+/* .flexbox { 
      display: flex; 
      flex-wrap: wrap;
      justify-content: center;
-    align-items: center;
+     align-items: center;
+} */
+
+.flexbox { 
+     display: -webkit-box; 
+     display: -ms-flexbox; 
+     display: flex; 
+     -ms-flex-wrap: wrap; 
+         flex-wrap: wrap;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /*-- Block Dividers -- */
@@ -402,6 +422,12 @@ input:-webkit-autofill:active  {
 @media (min-width: 1440px) {
     .homePageText {
         font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .carousel {
+        margin-bottom: 2%;
     }
 }
 
