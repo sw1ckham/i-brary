@@ -350,12 +350,6 @@ input:-webkit-autofill:active  {
 
 /* --- Flexbox code taken from https://stackoverflow.com/questions/50671682/center-align-items-in-materializecss-row to center card columns --- */
 
-/* .flexbox { 
-     display: flex; 
-     flex-wrap: wrap;
-     justify-content: center;
-     align-items: center;
-} */
 
 .flexbox { 
      display: -webkit-box; 
